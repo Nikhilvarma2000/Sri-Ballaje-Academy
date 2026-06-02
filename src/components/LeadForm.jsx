@@ -63,7 +63,7 @@ export default function LeadForm({
         </div>
 
         <h4 className="text-2xl font-bold text-green-600">
-          Seat Reserved Successfully!
+         We will get back to you soon!
         </h4>
 
         <p className="text-gray-600 mt-3 leading-relaxed">
