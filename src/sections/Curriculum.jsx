@@ -4,113 +4,111 @@ import React from 'react';
 export default function Curriculum() {
   const modules = [
     {
-      id: "M1",
-      title: "Professional Makeup Course",
-      accent: "border-studio-cyan",
+      id: "1",
+      title: "Professional Makeup",
+      badge: "Basic To Advanced",
       items: [
         "No Makeup Look",
-        "HD Makeup Technique",
-        "Dewy Finish Makeup",
-        "Glossy Makeup Look",
-        "Matte Finish Makeup",
+        "H.D. Makeup Look",
+        "Sweet Proof Makeup Look",
+        "Glassy Makeup Look",
+        "Matte Finishing Makeup",
         "Engagement Makeup Looks"
       ]
     },
     {
-      id: "M2",
+      id: "2",
       title: "Bridal Makeup Course",
-      accent: "border-studio-yellow",
+      badge: "Most Popular",
       items: [
-        "Airbrush Makeup Systems",
-        "Classic Bridal Masterclass",
+        "Air Brush Makeup",
+        "Classic Makeup Look",
         "Christian Bridal Look",
         "Muslim Bridal Look",
-        "Glamorous Reception Look",
-        "Vibrant Haldi Look",
-        "North Indian Bridal Style"
+        "Reception Look",
+        "Haldhi Makeup Look",
+        "North Indian Makeup Look"
       ]
     },
     {
-      id: "M3",
-      title: "Advanced Makeup Matrix",
-      accent: "border-studio-cyan",
+      id: "3",
+      title: "Advanced Makeup",
+      badge: "Fashion Style",
       items: [
-        "Editorial Makeup Layouts",
-        "High-Fashion Model Portfolios",
-        "Runway & Fashion Makeup",
-        "Celebrity Makeup Formatting"
+        "Editorial Makeup",
+        "Model Makeup Looks",
+        "Fashion Makeup",
+        "Celebrity Makeup"
       ]
     },
     {
-      id: "M4",
-      title: "Special Effects & Cinematic",
-      accent: "border-studio-yellow",
+      id: "4",
+      title: "Movie & SFX Makeup",
+      badge: "Special Effects",
       items: [
-        "SFX Makeup Applications",
-        "Theatrical Character Makeup",
-        "Fantasy Artistry Designs",
-        "Historical Realism Makeup",
-        "Drag Transformation Systems",
-        "Cake Makeup Foundations"
+        "S.F.X. Makeup Look",
+        "Cake Makeup Look",
+        "God's Makeup Look",
+        "Drag Proof Makeup",
+        "Historical Makeup Look"
       ]
     }
   ];
 
   const highlights = [
-    { title: "30+ Makeup Looks", desc: "Complete practical mastery across all industry look variants." },
-    { title: "10+ Saree Draping Styles", desc: "Traditional, cultural, and modern structural draping systems." },
-    { title: "ISO Certification Included", desc: "Valid professional certification recognized by elite industry salons." },
-    { title: "100% Practical Hands-On", desc: "Conducted entirely on live models inside an active studio sandbox." }
+    { title: "30+ Makeup & Hair Looks", desc: "Learn many different styles perfectly step-by-step." },
+    { title: "10+ Saree Draping Styles", desc: "Learn traditional and modern ways to drape a saree cleanly." },
+    { title: "Professional Certificate Included", desc: "Get a valid course completion certificate to get jobs easily." },
+    { title: "100% Practical on Live Models", desc: "No dummy practice. Work directly on real live models in our studio." }
   ];
 
   return (
-    <section className="py-24 bg-studio-dark border-y border-white/5 relative">
+    <section className="py-20 bg-studio-dark border-y border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading Header Block */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-xs uppercase tracking-[0.25em] text-studio-yellow font-bold">
-            Comprehensive Academy Blueprint
+        {/* Simple Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-xs uppercase tracking-widest text-studio-yellow font-bold bg-studio-yellow/10 px-3 py-1 rounded">
+            Our Course Syllabus
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 font-bold tracking-wide text-white">
-            The Artistry Curriculum Matrix
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold mt-4 tracking-wide text-white">
+            What You Will Learn In This Course
           </h2>
-          <div className="w-16 h-[2px] bg-studio-cyan mx-auto mt-4" />
-          <p className="text-studio-muted text-xs sm:text-sm mt-4 font-light max-w-xl mx-auto leading-relaxed">
-            From essential beauty fundamentals to complex cinematic prosthetic designs, our modules are fully engineered for immediate commercial deployment.
+          <div className="w-12 h-[2px] bg-studio-cyan mx-auto mt-3" />
+          <p className="text-studio-muted text-xs sm:text-sm mt-3 font-light leading-relaxed">
+            We teach you everything from basic beauty setup to advanced movie artist makeup styles. Easy to learn for beginners.
           </p>
         </div>
 
-        {/* 4-Column Module Curriculum Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch mb-16">
+        {/* 4 Course Boxes Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {modules.map((mod) => (
             <div 
               key={mod.id} 
-              className={`bg-studio-black border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-white/20 transition-all duration-300 group shadow-xl relative overflow-hidden`}
+              className="bg-studio-black border border-white/10 rounded-2xl p-6 hover:border-studio-cyan/30 transition-all duration-300 relative flex flex-col justify-between"
             >
-              {/* Highlight Accent Corner Tag */}
-              <div className={`absolute top-0 right-0 w-12 h-12 translate-x-6 -translate-y-6 rotate-45 opacity-20 group-hover:opacity-40 transition-opacity bg-studio-cyan`} />
-
               <div>
-                {/* Module Identifiers */}
-                <div className="flex justify-between items-center mb-6">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-yellow">
-                    Module {mod.id}
+                {/* Highlighted Module Header and Small Badges */}
+                <div className="flex justify-between items-center mb-4">
+                  <span className="text-[10px] font-bold uppercase text-studio-yellow tracking-wider">
+                    MODULE {mod.id}
                   </span>
-                  <div className="w-1.5 h-1.5 rounded-full bg-studio-cyan" />
+                  <span className="text-[9px] font-bold uppercase text-black bg-studio-cyan px-2 py-0.5 rounded">
+                    {mod.badge}
+                  </span>
                 </div>
 
-                {/* Module Titles */}
-                <h3 className="font-serif text-xl font-bold tracking-wide text-white mb-6 group-hover:text-studio-cyan transition-colors">
+                {/* Main Course Title */}
+                <h3 className="font-serif text-xl font-bold text-white tracking-wide mb-5 border-b border-white/5 pb-2">
                   {mod.title}
                 </h3>
 
-                {/* Sub-item Syllabus Nodes */}
+                {/* List Items from handwriting note */}
                 <ul className="space-y-3">
-                  {mod.items.map((item, index) => (
-                    <li key={index} className="flex items-start gap-2.5 text-xs text-studio-muted font-light leading-snug">
-                      <span className="text-studio-cyan text-[10px] mt-0.5 select-none">✦</span>
-                      <span>{item}</span>
+                  {mod.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-xs text-studio-muted font-light">
+                      <span className="text-studio-cyan font-bold select-none text-[11px]">✔</span>
+                      <span className="hover:text-white transition-colors">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -119,34 +117,35 @@ export default function Curriculum() {
           ))}
         </div>
 
-        {/* Additional Professional Training Integration Banner */}
-        <div className="bg-studio-charcoal border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden">
-          {/* Subtle gradient structural background layer */}
-          <div className="absolute inset-0 bg-radial-gradient from-studio-cyan/5 to-transparent opacity-30 pointer-events-none" />
+        {/* Extra Training Highlight Box */}
+        <div className="bg-studio-charcoal border-2 border-white/10 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
           
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left Header Descriptor */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Header Info */}
             <div className="lg:col-span-4 space-y-2 text-center lg:text-left">
-              <span className="text-[9px] uppercase font-bold tracking-[0.3em] text-studio-cyan block">
-                Value Add-On Suite
+              <span className="text-[10px] uppercase font-bold tracking-widest text-studio-yellow block">
+                Free Extras For You
               </span>
-              <h4 className="font-serif text-2xl font-bold tracking-wide text-white">
-                Additional Value Training Included
+              <h4 className="font-serif text-2xl font-bold text-white tracking-wide">
+                More Benefits Included in This Course
               </h4>
-              <p className="text-xs text-studio-muted font-light leading-relaxed max-w-sm mx-auto lg:mx-0">
-                Every long-form academic course enrollment includes immediate unlocked access to these critical industry specializations.
+              <p className="text-xs text-studio-muted font-light leading-relaxed">
+                When you enroll today, you get these important practical training features completely included.
               </p>
             </div>
 
-            {/* Right Features Breakdown Grid */}
-            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            {/* Right Highlights Grid with Visual Highlight Cards */}
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {highlights.map((high, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-studio-black/60 border border-white/5 flex gap-3.5 items-start">
-                  <div className="w-7 h-7 rounded-lg bg-studio-cyan/10 border border-studio-cyan/20 flex items-center justify-center text-studio-cyan text-xs font-bold shrink-0 mt-0.5">
+                <div key={idx} className="p-4 rounded-xl bg-studio-black border border-white/10 flex gap-3.5 items-start">
+                  {/* Highlight Checkmark Circle */}
+                  <div className="w-6 h-6 rounded-full bg-studio-yellow text-black flex items-center justify-center text-xs font-black shrink-0 mt-0.5">
                     ✓
                   </div>
                   <div className="space-y-0.5">
-                    <p className="text-xs font-bold tracking-wide text-white">
+                    {/* Main highlight text bolded */}
+                    <p className="text-xs font-bold text-studio-cyan tracking-wide">
                       {high.title}
                     </p>
                     <p className="text-[11px] text-studio-muted font-light leading-normal">
@@ -156,6 +155,7 @@ export default function Curriculum() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
 
