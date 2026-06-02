@@ -1,83 +1,190 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-export default function LeadForm({ placementTag, scriptEndpoint, onSuccess }) {
-  const [inputs, setInputs] = useState({ name: '', mobile: '', city: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+export default function LeadForm({
+  placementTag,
+  scriptEndpoint,
+  onSuccess,
+}) {
+  const [inputs, setInputs] = useState({
+    name: "",
+    mobile: "",
+    city: "",
+  });
+
+  const [status, setStatus] = useState("idle");
 
   const handleFormPost = async (e) => {
     e.preventDefault();
-    setStatus('sending');
+    setStatus("sending");
 
     try {
       const formPayload = new URLSearchParams();
-      formPayload.append('name', inputs.name);
-      formPayload.append('mobile', inputs.mobile);
-      formPayload.append('city', inputs.city);
-      formPayload.append('source', placementTag);
+
+      formPayload.append("name", inputs.name);
+      formPayload.append("mobile", inputs.mobile);
+      formPayload.append("city", inputs.city);
+      formPayload.append("source", placementTag);
 
       await fetch(scriptEndpoint, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formPayload.toString()
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formPayload.toString(),
       });
 
-      if (window.gtag) window.gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL' });
-      if (window.fbq) window.fbq('track', 'Lead');
+      if (window.gtag) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-CONVERSION_ID/LABEL",
+        });
+      }
 
-      setStatus('success');
-      if (onSuccess) setTimeout(onSuccess, 1500);
+      if (window.fbq) {
+        window.fbq("track", "Lead");
+      }
+
+      setStatus("success");
+
+      if (onSuccess) {
+        setTimeout(onSuccess, 1500);
+      }
     } catch (err) {
       console.error(err);
-      setStatus('error');
+      setStatus("error");
     }
   };
 
-  if (status === 'success') {
+  if (status === "success") {
     return (
-      <div className="py-8 text-center space-y-3 animate-fadeIn">
-        <div className="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-xl border border-emerald-500/20">✓</div>
-        <h4 className="text-base font-bold text-white uppercase tracking-wider">Access Approved</h4>
-        <p className="text-xs text-studio-muted">Our academic counselor will contact you over WhatsApp shortly.</p>
+      <div className="py-8 text-center animate-fadeIn">
+        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+          <span className="text-3xl">✅</span>
+        </div>
+
+        <h4 className="text-2xl font-bold text-green-600">
+          Seat Reserved Successfully!
+        </h4>
+
+        <p className="text-gray-600 mt-3 leading-relaxed">
+          Thank you for your interest.
+          <br />
+          Our counselor will call you shortly and explain the complete course details.
+        </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleFormPost} className="space-y-4">
+    <form onSubmit={handleFormPost} className="space-y-5">
+      {/* Name */}
+
       <div>
-        <label className="block text-[10px] uppercase tracking-wider font-bold text-studio-muted mb-1">Your Name</label>
-        <input 
-          type="text" required placeholder="Enter your full name" value={inputs.name}
-          onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
-          className="w-full bg-studio-black border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-studio-cyan text-white placeholder:text-neutral-600"
-        />
-      </div>
-      <div>
-        <label className="block text-[10px] uppercase tracking-wider font-bold text-studio-muted mb-1">Mobile Number</label>
-        <input 
-          type="tel" required pattern="[0-9]{10}" placeholder="10-digit smartphone number" value={inputs.mobile}
-          onChange={(e) => setInputs({ ...inputs, mobile: e.target.value })}
-          className="w-full bg-studio-black border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-studio-cyan text-white placeholder:text-neutral-600"
-        />
-      </div>
-      <div>
-        <label className="block text-[10px] uppercase tracking-wider font-bold text-studio-muted mb-1">City / Town</label>
-        <input 
-          type="text" required placeholder="e.g., Hyderabad, Huzur Nagar" value={inputs.city}
-          onChange={(e) => setInputs({ ...inputs, city: e.target.value })}
-          className="w-full bg-studio-black border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-studio-cyan text-white placeholder:text-neutral-600"
+        <label className="block text-sm font-semibold text-gray-700 mb-2">
+          👩 Your Name
+        </label>
+
+        <input
+          type="text"
+          required
+          placeholder="Enter Your Name"
+          value={inputs.name}
+          onChange={(e) =>
+            setInputs({
+              ...inputs,
+              name: e.target.value,
+            })
+          }
+          className="w-full h-14 px-4 rounded-xl border-2 border-rose-100 bg-white text-gray-800 placeholder:text-gray-400 focus:border-rose-500 focus:outline-none transition"
         />
       </div>
 
-      {status === 'error' && <p className="text-xs text-rose-400">Submission error. Please check your connection and retry.</p>}
+      {/* Mobile */}
+
+      <div>
+        <label className="block text-sm font-semibold text-gray-700 mb-2">
+          📞 WhatsApp Number
+        </label>
+
+        <input
+          type="tel"
+          required
+          pattern="[0-9]{10}"
+          placeholder="Enter WhatsApp Number"
+          value={inputs.mobile}
+          onChange={(e) =>
+            setInputs({
+              ...inputs,
+              mobile: e.target.value,
+            })
+          }
+          className="w-full h-14 px-4 rounded-xl border-2 border-rose-100 bg-white text-gray-800 placeholder:text-gray-400 focus:border-rose-500 focus:outline-none transition"
+        />
+      </div>
+
+      {/* City */}
+
+      <div>
+        <label className="block text-sm font-semibold text-gray-700 mb-2">
+          📍 City / Village
+        </label>
+
+        <input
+          type="text"
+          required
+          placeholder="Your City Name"
+          value={inputs.city}
+          onChange={(e) =>
+            setInputs({
+              ...inputs,
+              city: e.target.value,
+            })
+          }
+          className="w-full h-14 px-4 rounded-xl border-2 border-rose-100 bg-white text-gray-800 placeholder:text-gray-400 focus:border-rose-500 focus:outline-none transition"
+        />
+      </div>
+
+      {status === "error" && (
+        <p className="text-center text-sm text-red-500">
+          Something went wrong. Please try again.
+        </p>
+      )}
+
+      {/* CTA Button */}
 
       <button
-        type="submit" disabled={status === 'sending'}
-        className="w-full py-4 bg-studio-cyan text-black font-bold text-xs uppercase tracking-widest rounded-lg transition-transform active:scale-[0.99] mt-2 shadow-lg disabled:opacity-40"
+        type="submit"
+        disabled={status === "sending"}
+        className="w-full h-16 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white text-lg font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {status === 'sending' ? 'Securing Seat...' : 'Claim Free Seat Now'}
+        {status === "sending"
+          ? "Booking Your Seat..."
+          : "🎓 Book Your Seat Now"}
       </button>
+
+      {/* Trust Indicators */}
+
+      <div className="pt-2 space-y-2">
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <span>✅</span>
+          <span>Free Career Guidance</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <span>✅</span>
+          <span>Limited Seats Available</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <span>📜</span>
+          <span>Certificate After Course Completion</span>
+        </div>
+
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <span>🔒</span>
+          <span>Your Information Is Safe & Secure</span>
+        </div>
+      </div>
     </form>
   );
 }

@@ -1,58 +1,108 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-// Core Framework Layout Sections Imports
-import Header from './sections/Header';
-import Hero from './sections/Hero';
-import Curriculum from './sections/Curriculum';
-import Gallery from './sections/Gallery'; // Newly Added
-import Services from './sections/Services';
-import Footer from './sections/Footer';
+/* Sections */
+import Header from "./sections/Header";
+import Hero from "./sections/Hero";
+import Curriculum from "./sections/Curriculum";
+import Gallery from "./sections/Gallery";
+import Services from "./sections/Services";
+import Footer from "./sections/Footer";
+import Testimonials from "./sections/Testimonials";
+/* Components */
+import Loader from "./components/Loader";
+import FloatingCTAs from "./components/FloatingCTAs";
+import ExitIntentPopup from "./components/ExitIntentPopup";
 
-// Operational Optimization Components Imports
-import Loader from './components/Loader'; // Newly Added
-import FloatingCTAs from './components/FloatingCTAs';
-import ExitIntentPopup from './components/ExitIntentPopup';
-
-// --- GOOGLE APPS SCRIPT DATABASE ENDPOINT LINK ---
-const WEBHOOK_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL";
+/* Google Apps Script URL */
+const WEBHOOK_SCRIPT_URL =
+  "YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL";
 
 export default function App() {
-  const [isExitPopupOpen, setIsExitPopupOpen] = useState(false);
+  const [isExitPopupOpen, setIsExitPopupOpen] =
+    useState(false);
 
   useEffect(() => {
     const handleMouseLeave = (e) => {
-      if (e.clientY < 45) {
-        const isShown = sessionStorage.getItem('studioExitShown');
-        if (!isShown) {
+      if (e.clientY <= 10) {
+        const popupShown =
+          sessionStorage.getItem(
+            "beautyAcademyExitShown"
+          );
+
+        if (!popupShown) {
           setIsExitPopupOpen(true);
-          sessionStorage.setItem('studioExitShown', 'true');
+
+          sessionStorage.setItem(
+            "beautyAcademyExitShown",
+            "true"
+          );
         }
       }
     };
-    document.addEventListener('mouseleave', handleMouseLeave);
-    return () => document.removeEventListener('mouseleave', handleMouseLeave);
+
+    document.addEventListener(
+      "mouseleave",
+      handleMouseLeave
+    );
+
+    return () =>
+      document.removeEventListener(
+        "mouseleave",
+        handleMouseLeave
+      );
   }, []);
 
   return (
-    <div className="bg-studio-black text-white font-sans antialiased selection:bg-studio-cyan selection:text-black min-h-screen">
-      
-      {/* Premium Loader Screens Layer */}
-      <Loader minimumLoadingTimeMs={2200} />
+    <div
+      className="
+        min-h-screen
+        bg-white
+        text-gray-900
+        font-sans
+        antialiased
+        overflow-x-hidden
+        selection:bg-rose-500
+        selection:text-white
+      "
+    >
+      {/* Luxury Loader */}
 
-      {/* Structured Section Tree Layout */}
+      <Loader />
+
+      {/* Main Layout */}
+
       <Header />
-      <Hero scriptUrl={WEBHOOK_SCRIPT_URL} />
-      <Curriculum />
-      <Gallery /> 
-      <Services />
+
+      <main>
+
+        <Hero
+          scriptUrl={WEBHOOK_SCRIPT_URL}
+        />
+
+        <Curriculum />
+
+        <Gallery />
+
+        <Services />
+
+        <Testimonials />
+
+      </main>
+
       <Footer />
-      
-      {/* Overlay Conversions Stack Component Engine */}
+
+      {/* Floating CTA */}
+
       <FloatingCTAs />
-      <ExitIntentPopup 
-        isOpen={isExitPopupOpen} 
-        onClose={() => setIsExitPopupOpen(false)} 
-        scriptUrl={WEBHOOK_SCRIPT_URL} 
+
+      {/* Exit Intent Popup */}
+
+      <ExitIntentPopup
+        isOpen={isExitPopupOpen}
+        onClose={() =>
+          setIsExitPopupOpen(false)
+        }
+        scriptUrl={WEBHOOK_SCRIPT_URL}
       />
     </div>
   );

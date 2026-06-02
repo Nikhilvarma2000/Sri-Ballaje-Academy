@@ -1,111 +1,227 @@
 // src/sections/Footer.jsx
-import React from 'react';
+
+import React from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  const scrollToForm = () => {
+    document
+      .getElementById("enroll-form")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      });
   };
 
   return (
-    <footer className="bg-studio-dark border-t border-white/10 pt-16 pb-32 md:pb-16 text-xs text-studio-muted relative z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Core Footer Data Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          
-          {/* Column 1: Physical Academy Headquarters */}
-          <div className="space-y-4">
-            <div className="flex flex-col">
-              <span className="font-serif text-lg tracking-[0.15em] font-bold text-white">
-                SRI BALLAJE
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.25em] text-studio-cyan font-bold -mt-0.5">
-                Bridal Makeup Studio & Academy
-              </span>
-            </div>
-            <p className="leading-relaxed font-light text-sm text-studio-muted">
-              8-3-231/C18/19/A, Sri Krishna Nagar,<br />
-              Yousufguda, Hyderabad,<br />
-              Telangana - 500044
-            </p>
-            <div className="pt-1">
-              <a 
-                href="mailto:pa1makeup@gmail.com" 
-                className="text-studio-cyan hover:text-studio-cyan-light transition-colors text-sm font-medium border-b border-studio-cyan/20 pb-0.5"
-              >
-                pa1makeup@gmail.com
-              </a>
-            </div>
-          </div>
+    <footer className="bg-gradient-to-b from-rose-50 to-white border-t border-rose-100">
 
-          {/* Column 2: Direct Support Call Grid */}
-          <div className="space-y-4">
-            <h4 className="text-white font-sans font-bold uppercase tracking-widest text-xs">
-              Admissions Hotline
-            </h4>
-            <div className="space-y-2">
-              <a 
-                href="tel:+919948434888" 
-                className="group flex items-center gap-3 text-base font-bold text-white hover:text-studio-yellow transition-colors"
-              >
-                <span className="w-2 h-2 rounded-full bg-studio-yellow group-hover:animate-ping" />
-                +91 9948434888
-              </a>
-              <a 
-                href="tel:+916281952746" 
-                className="group flex items-center gap-3 text-base font-bold text-white hover:text-studio-yellow transition-colors"
-              >
-                <span className="w-2 h-2 rounded-full bg-studio-yellow group-hover:animate-ping" />
-                +91 6281952746
-              </a>
-            </div>
-            <div className="pt-2">
-              <a 
-                href="https://www.instagram.com/sriballajebridalmakeupstudio?utm_source=qr&igsh=bm0zOGhwcXQ1dDky" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 text-studio-cyan hover:text-white transition-colors font-semibold uppercase tracking-wider text-[11px] bg-studio-charcoal border border-white/5 px-4 py-2 rounded-lg"
-              >
-                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                </svg>
-                Studio Instagram Profile
-              </a>
-            </div>
-          </div>
+      {/* Final CTA Section */}
 
-          {/* Column 3: Conversion Verification Metadata */}
-          <div className="space-y-4">
-            <h4 className="text-white font-sans font-bold uppercase tracking-widest text-xs">
-              Ad Campaign Compliance
-            </h4>
-            <p className="font-light leading-relaxed text-studio-muted text-xs">
-              This digital infrastructure is fully structured for high-performance Google Ads conversion monitoring. All analytics code execution layers conform to standardized security and immediate lead dispatch processing data paths.
-            </p>
-            <button 
-              onClick={handleScrollToTop}
-              className="text-[10px] uppercase font-bold tracking-widest text-studio-yellow hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer"
-            >
-              ▲ Back To Application Form
-            </button>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
 
-        </div>
+        <div className="bg-gradient-to-r from-rose-500 to-pink-500 rounded-[32px] p-8 md:p-14 text-center text-white shadow-2xl">
 
-        {/* Bottom Metadata Block */}
-        <div className="max-w-7xl mx-auto text-center border-t border-white/5 pt-8 text-[11px] tracking-wide font-light flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>&copy; {currentYear} Sri Ballaje Bridal Makeup Studio & Academy. All Rights Reserved.</p>
-          <p className="text-[10px] text-neutral-600 uppercase font-mono tracking-widest">
-            High Conversion Design System — Built via Tailwind v4
+          <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
+            ✨ Limited Seats Available
+          </span>
+
+          <h2 className="text-3xl md:text-5xl font-bold mt-6 leading-tight">
+            Start Your Beautician Career Today
+          </h2>
+
+          <p className="mt-5 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+            Learn Professional Makeup, Hair Styling,
+            Saree Draping and Bridal Techniques from
+            Industry Experts.
           </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+
+            <button
+              onClick={scrollToForm}
+              className="
+                bg-white
+                text-rose-600
+                px-8
+                h-14
+                rounded-xl
+                font-bold
+                text-lg
+                shadow-lg
+                hover:scale-105
+                transition
+              "
+            >
+              🎓 Book Your Seat Now
+            </button>
+
+            <a
+              href="tel:+919948434888"
+              className="
+                border-2
+                border-white
+                px-8
+                h-14
+                rounded-xl
+                font-bold
+                text-lg
+                flex
+                items-center
+                justify-center
+                hover:bg-white/10
+                transition
+              "
+            >
+              📞 Call Now
+            </a>
+
+          </div>
+
         </div>
 
       </div>
+
+      {/* Footer Main */}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <div className="grid md:grid-cols-3 gap-12">
+
+          {/* Academy Info */}
+
+          <div>
+
+            <h3 className="text-3xl font-bold text-gray-900">
+              Sri Ballaje
+            </h3>
+
+            <p className="text-rose-600 font-semibold mt-1">
+              Bridal Makeup Studio & Academy
+            </p>
+
+            <p className="text-gray-600 mt-5 leading-relaxed">
+              Transform your passion into a successful
+              beautician career with practical training
+              and professional guidance.
+            </p>
+
+          </div>
+
+          {/* Contact */}
+
+          <div>
+
+            <h4 className="text-xl font-bold text-gray-900 mb-5">
+              Contact Us
+            </h4>
+
+            <div className="space-y-4 text-gray-600">
+
+              <p>
+                📍 8-3-231/C18/19/A,
+                Sri Krishna Nagar,
+                Yousufguda,
+                Hyderabad,
+                Telangana - 500045
+              </p>
+
+              <a
+                href="tel:+919948434888"
+                className="block hover:text-rose-600"
+              >
+                📞 +91 9948434888
+              </a>
+
+              <a
+                href="tel:+916281952746"
+                className="block hover:text-rose-600"
+              >
+                📞 +91 6281952746
+              </a>
+
+              <a
+                href="mailto:pa1makeup@gmail.com"
+                className="block hover:text-rose-600"
+              >
+                ✉️ pa1makeup@gmail.com
+              </a>
+
+            </div>
+
+          </div>
+
+          {/* Social + Trust */}
+
+          <div>
+
+            <h4 className="text-xl font-bold text-gray-900 mb-5">
+              Follow Us
+            </h4>
+
+            <a
+              href="https://www.instagram.com/sriballajebridalmakeupstudio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex
+                items-center
+                gap-3
+                bg-white
+                border
+                border-rose-100
+                rounded-xl
+                px-5
+                py-3
+                shadow-md
+                hover:shadow-lg
+                transition
+              "
+            >
+              📸 Instagram
+            </a>
+
+            <div className="mt-8 space-y-3">
+
+              <div className="flex items-center gap-2 text-gray-600">
+                <span>✅</span>
+                <span>27+ Years Experience</span>
+              </div>
+
+              <div className="flex items-center gap-2 text-gray-600">
+                <span>✅</span>
+                <span>100% Practical Training</span>
+              </div>
+
+              <div className="flex items-center gap-2 text-gray-600">
+                <span>✅</span>
+                <span>Professional Certification</span>
+              </div>
+
+              <div className="flex items-center gap-2 text-gray-600">
+                <span>✅</span>
+                <span>Career Guidance Support</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Bottom */}
+
+        <div className="border-t border-rose-100 mt-12 pt-8 text-center">
+
+          <p className="text-gray-500">
+            © {currentYear} Sri Ballaje Bridal Makeup Studio & Academy.
+            All Rights Reserved.
+          </p>
+
+        </div>
+
+      </div>
+
     </footer>
   );
 }
