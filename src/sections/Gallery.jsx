@@ -1,63 +1,71 @@
 // src/sections/Gallery.jsx
 
+
 import React, { useState, useEffect, useRef } from "react";
+import bridalImg from "../assets/gallery/bridal.jpg";
+import hdImg from "../assets/gallery/hd-makeup.jpg";
+import airbrushImg from "../assets/gallery/airbrush-makeup.jpg";
+import receptionImg from "../assets/gallery/reception-look.jpg";
+import hairImg from "../assets/gallery/bridal-hairstyle.jpg";
+import trainingImg from "../assets/gallery/makeup-training.jpg";
 
 const galleryItems = [
   {
     id: 1,
     title: "Bridal Makeup",
-    subtitle: "Traditional Bridal Transformation",
+    subtitle: "Traditional South Indian Bridal Transformation",
     category: "Most Popular",
     tag: "👑 Signature Look",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&auto=format&fit=crop&q=80",
+    image: bridalImg,
     accent: "#f43f5e",
   },
   {
     id: 2,
     title: "HD Makeup",
-    subtitle: "Camera Ready Finish",
+    subtitle: "Flawless Camera-Ready Finish",
     category: "HD Makeup",
     tag: "📸 Studio Grade",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200&auto=format&fit=crop&q=80",
+    image: hdImg,
     accent: "#ec4899",
   },
   {
     id: 3,
-    title: "Air Brush",
-    subtitle: "Premium Bridal Finish",
+    title: "Air Brush Makeup",
+    subtitle: "Luxury Bridal Perfection",
     category: "Air Brush",
     tag: "✨ Ultra Smooth",
-    image: "https://images.unsplash.com/photo-1631214503951-366ec33a8f6d?w=1200&auto=format&fit=crop&q=80",
+    image: airbrushImg,
     accent: "#f472b6",
   },
   {
     id: 4,
     title: "Reception Look",
-    subtitle: "Elegant Evening Glam",
+    subtitle: "Modern Glam Evening Makeup",
     category: "Reception",
-    tag: "🌙 Evening Look",
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=1200&auto=format&fit=crop&q=80",
+    tag: "🌙 Evening Glam",
+    image: receptionImg,
     accent: "#fb7185",
   },
   {
     id: 5,
     title: "Hair Styling",
-    subtitle: "Professional Hairstyles",
+    subtitle: "Professional Bridal Hairstyles",
     category: "Hair Styling",
     tag: "💫 Hair Artistry",
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&auto=format&fit=crop&q=80",
+    image: hairImg,
     accent: "#f9a8d4",
   },
   {
     id: 6,
     title: "Student Training",
-    subtitle: "Live Model Practice",
+    subtitle: "Hands-On Live Model Practice",
     category: "Training",
-    tag: "🎓 Hands-On",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80",
+    tag: "🎓 Practical Session",
+    image: trainingImg,
     accent: "#fda4af",
   },
 ];
+
 
 const stats = [
   { value: "19+", label: "Makeup Looks", icon: "💄" },

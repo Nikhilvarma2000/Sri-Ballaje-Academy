@@ -66,7 +66,7 @@ export default function Curriculum() {
           <div className="bg-white rounded-[28px] shadow-lg border border-rose-100 p-8 text-center hover:shadow-xl transition">
 
             <div className="text-5xl font-bold text-rose-500">
-              14+
+              19+
             </div>
 
             <h3 className="mt-3 text-xl font-bold text-gray-900">
