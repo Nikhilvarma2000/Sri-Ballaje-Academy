@@ -823,7 +823,7 @@ export default function Gallery() {
             </h3>
             <p className="cta-desc">
               Learn step by step through live practical training
-              under the guidance of industry experts.
+              under the guidance of Film Industry experts.
             </p>
             <button className="cta-btn" onClick={scrollToForm}>
               <span>🎓</span> Book Your Seat Now

@@ -226,7 +226,7 @@ export default function Loader() {
               font-semibold
             "
           >
-            ✨ 27+ Years Industry Experience
+            ✨ 27+ Years of Film Industry Experience
           </span>
 
         </div>
