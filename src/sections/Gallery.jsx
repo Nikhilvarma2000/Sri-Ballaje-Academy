@@ -9,7 +9,7 @@ const galleryItems = [
     subtitle: "Traditional Bridal Transformation",
     category: "Most Popular",
     tag: "👑 Signature Look",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&auto=format&fit=crop&q=80",
     accent: "#f43f5e",
   },
   {
@@ -18,7 +18,7 @@ const galleryItems = [
     subtitle: "Camera Ready Finish",
     category: "HD Makeup",
     tag: "📸 Studio Grade",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200&auto=format&fit=crop&q=80",
     accent: "#ec4899",
   },
   {
@@ -27,7 +27,7 @@ const galleryItems = [
     subtitle: "Premium Bridal Finish",
     category: "Air Brush",
     tag: "✨ Ultra Smooth",
-    image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1631214503951-366ec33a8f6d?w=1200&auto=format&fit=crop&q=80",
     accent: "#f472b6",
   },
   {
@@ -36,7 +36,7 @@ const galleryItems = [
     subtitle: "Elegant Evening Glam",
     category: "Reception",
     tag: "🌙 Evening Look",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=1200&auto=format&fit=crop&q=80",
     accent: "#fb7185",
   },
   {
@@ -45,7 +45,7 @@ const galleryItems = [
     subtitle: "Professional Hairstyles",
     category: "Hair Styling",
     tag: "💫 Hair Artistry",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&auto=format&fit=crop&q=80",
     accent: "#f9a8d4",
   },
   {
@@ -54,13 +54,13 @@ const galleryItems = [
     subtitle: "Live Model Practice",
     category: "Training",
     tag: "🎓 Hands-On",
-    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80",
     accent: "#fda4af",
   },
 ];
 
 const stats = [
-  { value: "14+", label: "Makeup Looks", icon: "💄" },
+  { value: "19+", label: "Makeup Looks", icon: "💄" },
   { value: "35+", label: "Hairstyles", icon: "💇‍♀️" },
   { value: "10+", label: "Saree Draping", icon: "🥻" },
   { value: "100%", label: "Practical Training", icon: "✅" },
@@ -721,7 +721,7 @@ export default function Gallery() {
             </div>
             <p className="section-desc">
               Master Bridal Makeup, HD Makeup, Air Brush, Hair Styling,
-              Reception Looks & Professional Beautician Techniques through
+              Reception Looks & Professional Makeup Techniques through
               hands-on live practical training.
             </p>
           </div>

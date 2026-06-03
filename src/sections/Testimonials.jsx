@@ -24,7 +24,7 @@ export default function Testimonials() {
     },
     {
       name: "Kavya",
-      earning: "Beautician",
+      earning: "Makeup Artist",
       review:
         "I highly recommend this academy for anyone who wants to build a career in beauty and makeup. The course fee is affordable and the training quality is excellent.",
     },

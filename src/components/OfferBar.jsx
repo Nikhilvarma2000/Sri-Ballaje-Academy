@@ -23,7 +23,7 @@ export default function OfferBar() {
               <div className="flex items-center gap-2 mt-1">
 
                 <span className="text-yellow-300 font-black text-xl animate-pulse">
-                  75% OFF
+                  50% OFF
                 </span>
 
                 <span className="text-white font-semibold text-xs">
@@ -83,7 +83,7 @@ export default function OfferBar() {
                   Get Upto
 
                   <span className="mx-2 text-yellow-300 text-5xl animate-pulse">
-                    75% OFF
+                    50% OFF
                   </span>
 
                   On Course Fee

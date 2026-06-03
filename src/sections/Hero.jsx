@@ -31,16 +31,16 @@ export default function Hero({ scriptUrl }) {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
               Zero Knowledge to
               <span className="block text-rose-600">
-                Professional Beautician
+                Professional Makeup Artist
               </span>
               Complete Training Program
             </h1>
 
             {/* Sub Heading */}
             <h2 className="mt-6 text-lg sm:text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium">
-              Start Your Beautician Career Under the Guidance of a
+              Start Your Makeup Career with Guidance from
               <span className="text-rose-600 font-bold">
-                {" "}27 Years Experienced Industry Expert
+                {" "}Film Industry Makeup Artist with 27 Years of Experience.
               </span>
             </h2>
 
