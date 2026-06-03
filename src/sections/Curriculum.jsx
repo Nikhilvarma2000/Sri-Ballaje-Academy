@@ -41,18 +41,18 @@ export default function Curriculum() {
         <div className="text-center max-w-4xl mx-auto mb-16">
 
           <span className="inline-flex items-center px-5 py-2 rounded-full bg-rose-100 text-rose-600 font-semibold text-sm">
-            ✨ Professional Beautician Training Program
+            ✨ Professional Makeup Training Program
           </span>
 
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mt-6 leading-tight">
-            Complete Beautician
+            Complete Makeup
             <span className="block text-rose-500">
               Training Program
             </span>
           </h2>
 
           <p className="text-gray-600 mt-6 text-lg md:text-xl leading-relaxed">
-            From Zero Knowledge To Professional Beautician.
+            From Zero Knowledge To Professional Makeup Artist.
             Learn Makeup, Hairstyles, Saree Draping,
             Bridal Techniques and Career Building Skills.
           </p>
@@ -284,7 +284,7 @@ export default function Curriculum() {
           <div className="bg-gradient-to-r from-rose-500 to-pink-500 rounded-[36px] p-8 md:p-12 text-center text-white shadow-2xl">
 
             <h3 className="text-3xl md:text-5xl font-bold">
-              Start Your Beautician Career Today
+              Start Your Makeup Career Today
             </h3>
 
             <p className="mt-5 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">

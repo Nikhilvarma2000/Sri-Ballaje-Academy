@@ -27,13 +27,13 @@ export default function Footer() {
           </span>
 
           <h2 className="text-3xl md:text-5xl font-bold mt-6 leading-tight">
-            Start Your Beautician Career Today
+            Start Your Makeup Career Today
           </h2>
 
           <p className="mt-5 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
             Learn Professional Makeup, Hair Styling,
             Saree Draping and Bridal Techniques from
-            Industry Experts.
+             Industry Experts.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -102,7 +102,7 @@ export default function Footer() {
 
             <p className="text-gray-600 mt-5 leading-relaxed">
               Transform your passion into a successful
-              beautician career with practical training
+              Makeup career with practical training
               and professional guidance.
             </p>
 

@@ -59,7 +59,7 @@ export default function FloatingCTAs() {
                 shadow-lg
               "
             >
-              🎓 Apply Now
+              🎓 Book Now
             </a>
 
           </div>
@@ -152,7 +152,7 @@ export default function FloatingCTAs() {
             <div>
 
               <p className="text-xs text-white/80">
-                Admissions Helpline
+                Booking Helpline
               </p>
 
               <p className="font-bold">
