@@ -13,6 +13,8 @@ import Loader from "./components/Loader";
 import FloatingCTAs from "./components/FloatingCTAs";
 import ExitIntentPopup from "./components/ExitIntentPopup";
 
+import OfferBar from "./components/OfferBar";
+
 /* Google Apps Script URL */
 const WEBHOOK_SCRIPT_URL =
   "YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL";
@@ -68,7 +70,10 @@ export default function App() {
       {/* Luxury Loader */}
 
       <Loader />
-
+      {/* Offer Bar */}
+   
+      <OfferBar />
+      
       {/* Main Layout */}
 
       <Header />
@@ -94,6 +99,8 @@ export default function App() {
       {/* Floating CTA */}
 
       <FloatingCTAs />
+
+
 
       {/* Exit Intent Popup */}
 

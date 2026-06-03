@@ -1,4 +1,7 @@
+// src/components/Loader.jsx
+
 import React, { useEffect, useState } from "react";
+import Logo from "../assets/logo/logo.png"; // Change filename if needed
 
 export default function Loader() {
   const [visible, setVisible] = useState(true);
@@ -27,7 +30,7 @@ export default function Loader() {
   return (
     <div
       className={`
-        fixed inset-0 z-[999]
+        fixed inset-0 z-[9999]
         flex items-center justify-center
         bg-gradient-to-br
         from-rose-50
@@ -37,32 +40,49 @@ export default function Loader() {
         ${visible ? "opacity-100" : "opacity-0"}
       `}
     >
-      {/* Background Blobs */}
+      {/* Background Blur Effects */}
 
-      <div className="absolute top-20 left-20 w-72 h-72 bg-rose-200/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-10 left-10 md:top-20 md:left-20 w-72 h-72 bg-rose-200/30 rounded-full blur-3xl animate-pulse" />
 
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-pink-200/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-10 right-10 md:bottom-20 md:right-20 w-72 h-72 bg-pink-200/30 rounded-full blur-3xl animate-pulse" />
 
-      {/* Center Content */}
+      {/* Main Loader */}
 
       <div className="relative text-center">
 
-        {/* Outer Ring */}
+        {/* Logo Spinner Area */}
 
         <div className="relative flex items-center justify-center">
 
-          <div className="absolute w-40 h-40 border-[3px] border-rose-200 rounded-full animate-spin" />
+          {/* Outer Ring */}
 
           <div
             className="
               absolute
-              w-28
-              h-28
+              w-52
+              h-52
+              rounded-full
               border-[3px]
+              border-rose-200
+              animate-spin
+            "
+            style={{
+              animationDuration: "10s",
+            }}
+          />
+
+          {/* Gradient Ring */}
+
+          <div
+            className="
+              absolute
+              w-44
+              h-44
+              rounded-full
+              border-[4px]
               border-transparent
               border-t-rose-500
               border-r-pink-400
-              rounded-full
               animate-spin
             "
             style={{
@@ -70,81 +90,144 @@ export default function Loader() {
             }}
           />
 
-          {/* Logo Circle */}
+          {/* Logo Container */}
 
           <div
             className="
-              w-28
-              h-28
+              relative
+              w-40
+              h-40
               rounded-full
               bg-white
-              shadow-2xl
-              border
+              border-2
               border-rose-100
+              shadow-[0_15px_50px_rgba(236,72,153,0.20)]
               flex
-              flex-col
               items-center
               justify-center
+              overflow-hidden
             "
           >
-            <span className="text-4xl">
-              👰
-            </span>
+            {/* Soft Glow */}
+
+            <div className="absolute inset-0 bg-gradient-to-br from-rose-100/30 to-pink-100/30 animate-pulse" />
+
+            {/* Logo */}
+
+            <img
+              src={Logo}
+              alt="Sri Ballaje Bridal"
+              className="
+                relative
+                z-10
+                w-36
+                h-36
+                object-contain
+                scale-110
+              "
+            />
           </div>
 
         </div>
 
-        {/* Brand */}
+        {/* Brand Text */}
 
         <div className="mt-10">
 
           <h1
             className="
               text-3xl
-              md:text-4xl
-              font-bold
+              md:text-5xl
+              font-black
               text-gray-900
               tracking-wide
             "
           >
-            Sri Ballaje
+            SRI BALLAJE BRIDAL
           </h1>
 
           <p
             className="
+              mt-3
               text-rose-500
-              font-semibold
-              tracking-widest
+              font-bold
+              tracking-[0.3em]
               uppercase
-              text-sm
-              mt-2
+              text-[11px]
+              md:text-sm
             "
           >
-            Bridal Makeup Studio & Academy
+            MAKEUP STUDIO & ACADEMY
           </p>
 
         </div>
 
-        {/* Loading */}
+        {/* Loading Bar */}
 
         <div className="mt-8">
 
-          <div className="w-56 h-2 bg-rose-100 rounded-full mx-auto overflow-hidden">
+          <div
+            className="
+              w-64
+              md:w-72
+              h-2.5
+              bg-rose-100
+              rounded-full
+              mx-auto
+              overflow-hidden
+            "
+          >
             <div
               className="
                 h-full
+                rounded-full
                 bg-gradient-to-r
                 from-rose-500
-                to-pink-500
-                rounded-full
+                via-pink-500
+                to-rose-400
                 animate-[loading_2.5s_linear_forwards]
               "
             />
           </div>
 
-          <p className="text-gray-500 mt-4 text-sm">
-            Preparing Your Beauty Career Journey...
+          <p
+            className="
+              text-gray-500
+              mt-4
+              text-sm
+              md:text-base
+              font-medium
+            "
+          >
+            Preparing Your Professional Beautician Journey...
           </p>
+
+        </div>
+
+        {/* Bottom Badge */}
+
+        <div className="mt-8">
+
+          <span
+            className="
+              inline-flex
+              items-center
+              gap-2
+              px-5
+              py-2.5
+              rounded-full
+              bg-white
+              border
+              border-rose-100
+              shadow-lg
+              text-rose-600
+              text-xs
+              md:text-sm
+              font-semibold
+            "
+          >
+            ✨ 27+ Years Industry Experience
+          </span>
 
         </div>
 

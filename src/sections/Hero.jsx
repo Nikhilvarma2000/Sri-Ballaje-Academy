@@ -5,11 +5,15 @@ import LeadForm from "../components/LeadForm";
 
 export default function Hero({ scriptUrl }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-pink-50 py-12 lg:py-24">
+    <section 
+    className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-pink-50 py-12 lg:py-24">
       
       {/* Background Decorations */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-rose-200/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl" />
+      
+      
+
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
