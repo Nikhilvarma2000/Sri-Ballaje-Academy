@@ -8,11 +8,11 @@ export default function Services() {
       icon: "👩‍🏫",
       title: "27+ Years Experience",
       description:
-        "Learn directly from an industry expert with 27 years of professional experience.",
+        "Learn directly from an Film industry expert with 27 years of professional experience.",
     },
     {
       icon: "💄",
-      title: "14+ Makeup Looks",
+      title: "19+ Makeup Looks",
       description:
         "Master bridal, HD, airbrush, reception and advanced makeup looks.",
     },
@@ -80,7 +80,7 @@ export default function Services() {
           </h2>
 
           <p className="text-gray-600 text-lg mt-5 leading-relaxed">
-            Learn professional beautician skills through practical training,
+            Learn professional Makeup skills through practical training,
             live model practice and expert guidance.
           </p>
 
@@ -132,11 +132,11 @@ export default function Services() {
           <div className="bg-gradient-to-r from-rose-500 to-pink-500 rounded-[32px] p-10 md:p-14 text-center text-white shadow-2xl">
 
             <h3 className="text-3xl md:text-5xl font-bold">
-              Start Your Beautician Career Today
+              Start Your Makeup Career Today
             </h3>
 
             <p className="mt-5 text-lg md:text-xl max-w-2xl mx-auto text-white/90">
-              Join our professional beautician training program and
+              Join our professional Makeup training program and
               learn skills that can help you build a successful career.
             </p>
 

@@ -199,7 +199,7 @@ export default function Loader() {
               font-medium
             "
           >
-            Preparing Your Professional Beautician Journey...
+            Preparing Your Professional Makeup Journey...
           </p>
 
         </div>
