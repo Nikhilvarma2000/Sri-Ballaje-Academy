@@ -25,15 +25,17 @@ export default function LeadForm({
       formPayload.append("city", inputs.city);
       formPayload.append("source", placementTag);
 
-      await fetch(scriptEndpoint, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: formPayload.toString(),
-      });
-
+      await fetch(
+  "https://script.google.com/macros/s/AKfycbwjzqbx-hd6ZTjjHJg-uBc3eg4m-yc1PeunpgwD6K5wxAP-5uL0Vrhrs-CrZ-dVlxfh/exec",
+  {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: formPayload.toString(),
+  }
+);
       if (window.gtag) {
         window.gtag("event", "conversion", {
           send_to: "AW-CONVERSION_ID/LABEL",
