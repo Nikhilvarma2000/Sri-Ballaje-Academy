@@ -49,7 +49,7 @@ export default function OfferBar() {
                 animate-pulse
               "
             >
-              📞 99484 34866
+              📞 9948434866
             </a>
 
           </div>
