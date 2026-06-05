@@ -62,7 +62,7 @@ export default function Header() {
               </p>
 
               <a
-                href="tel:+919948434888"
+                href="tel:+919948434866"
                 className="
                   block
                   text-2xl
@@ -104,7 +104,7 @@ export default function Header() {
           <div className="flex lg:hidden items-center gap-2">
 
             <a
-              href="tel:+919948434888"
+              href="tel:+919948434866"
               className="
                 bg-gradient-to-r
                 from-rose-500

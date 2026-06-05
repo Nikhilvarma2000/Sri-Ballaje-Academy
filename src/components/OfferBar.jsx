@@ -35,7 +35,7 @@ export default function OfferBar() {
             </div>
 
             <a
-              href="tel:+919948434888"
+              href="tel:+919948434866"
               className="
                 bg-white
                 text-red-600
@@ -95,7 +95,7 @@ export default function OfferBar() {
             </div>
 
             <a
-              href="tel:+919948434888"
+              href="tel:+919948434866"
               className="
                 bg-white
                 text-red-600
