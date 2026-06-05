@@ -4,7 +4,7 @@ import React from "react";
 
 export default function FloatingCTAs() {
   const whatsappUrl =
-    "https://wa.me/919948434888?text=Hi%20Sri%20Ballaje%20Academy,%20I%20am%20interested%20in%20the%20Beautician%20Course.%20Please%20share%20details.";
+    "https://wa.me/919948434866?text=Hi%20Sri%20Ballaje%20Academy,%20I%20am%20interested%20in%20the%20Beautician%20Course.%20Please%20share%20details.";
 
   return (
     <>
@@ -19,7 +19,7 @@ export default function FloatingCTAs() {
             {/* Call */}
 
             <a
-              href="tel:+919948434888"
+              href="tel:+919948434866"
               className="
                 h-14
                 rounded-2xl
@@ -128,7 +128,7 @@ export default function FloatingCTAs() {
         {/* Call Card */}
 
         <a
-          href="tel:+919948434888"
+          href="tel:+919948434866"
           className="
             bg-gradient-to-r
             from-rose-500
@@ -156,7 +156,7 @@ export default function FloatingCTAs() {
               </p>
 
               <p className="font-bold">
-                +91 9948434888
+                +91 9948434866
               </p>
 
             </div>

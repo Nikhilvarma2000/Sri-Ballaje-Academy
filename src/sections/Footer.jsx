@@ -57,7 +57,7 @@ export default function Footer() {
             </button>
 
             <a
-              href="tel:+919948434888"
+              href="tel:+919948434866"
               className="
                 border-2
                 border-white
@@ -127,19 +127,13 @@ export default function Footer() {
               </p>
 
               <a
-                href="tel:+919948434888"
+                href="tel:+919948434866"
                 className="block hover:text-rose-600"
               >
-                📞 +91 9948434888
+                📞 +91 9948434866
               </a>
 
-              <a
-                href="tel:+916281952746"
-                className="block hover:text-rose-600"
-              >
-                📞 +91 6281952746
-              </a>
-
+              
               <a
                 href="mailto:pa1makeup@gmail.com"
                 className="block hover:text-rose-600"
