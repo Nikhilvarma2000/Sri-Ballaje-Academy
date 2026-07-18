@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+
     <title>Sri Ballaje Bridal Makeup Studio & Academy</title>
 
     <meta
@@ -13,12 +18,18 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <!-- Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-YOUR_GOOGLE_ADS_ID"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-YOUR_GOOGLE_ADS_ID"
+    ></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
+
       gtag("js", new Date());
       gtag("config", "AW-YOUR_GOOGLE_ADS_ID");
     </script>
@@ -26,36 +37,60 @@
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js'
+      {
+        if(f.fbq)return;
+
+        n=f.fbq=function(){
+          n.callMethod
+            ? n.callMethod.apply(n,arguments)
+            : n.queue.push(arguments)
+        };
+
+        if(!f._fbq)f._fbq=n;
+
+        n.push=n;
+        n.loaded=!0;
+        n.version='2.0';
+        n.queue=[];
+
+        t=b.createElement(e);
+        t.async=!0;
+        t.src=v;
+
+        s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)
+
+      }(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
       );
 
       fbq('init', '4266094986974575');
-      fbq('track', 'PageView');
+
+      // Track Lead Event
+      fbq('track', 'Lead');
     </script>
     <!-- End Meta Pixel Code -->
+
   </head>
 
   <body class="bg-[#000000] text-white">
-    <!-- Meta Pixel (noscript) -->
+
+    <!-- Meta Pixel Lead Event - NoScript Fallback -->
     <noscript>
       <img
         height="1"
         width="1"
         style="display:none"
-        src="https://www.facebook.com/tr?id=4266094986974575&ev=PageView&noscript=1"
+        src="https://www.facebook.com/tr?id=4266094986974575&ev=Lead&noscript=1"
       />
     </noscript>
 
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
+
   </body>
 </html>
