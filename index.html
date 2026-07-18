@@ -58,7 +58,7 @@
         t.src=v;
 
         s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)
+        s.parentNode.insertBefore(t,s);
 
       }(
         window,
@@ -67,10 +67,10 @@
         'https://connect.facebook.net/en_US/fbevents.js'
       );
 
-      fbq('init', '4266094986974575');
+      <!-- Initialize Meta Pixel -->
+      fbq('init', '1823708638959619');
 
-      // Track Lead Event
-      fbq('track', 'Lead');
+      fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
 
@@ -78,13 +78,13 @@
 
   <body class="bg-[#000000] text-white">
 
-    <!-- Meta Pixel Lead Event - NoScript Fallback -->
+    <!-- Meta Pixel NoScript Fallback -->
     <noscript>
       <img
         height="1"
         width="1"
         style="display:none"
-        src="https://www.facebook.com/tr?id=4266094986974575&ev=Lead&noscript=1"
+        src="https://www.facebook.com/tr?id=1823708638959619&ev=PageView&noscript=1"
       />
     </noscript>
 
